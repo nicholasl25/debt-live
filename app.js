@@ -21,7 +21,7 @@ const LUCA = {
 };
 
 const NATIONAL_FRAC_DIGITS = 2;
-const LUCA_FRAC_DIGITS = 2;
+const LUCA_FRAC_DIGITS = 8;
 
 const MS_PER_MONTH = (365.25 / 12) * 24 * 60 * 60 * 1000;
 const LUCA_LN_PER_MS = Math.log(LUCA.monthlyMultiplier) / MS_PER_MONTH;
@@ -69,7 +69,7 @@ function renderLuca(nowMs) {
   const { sign, wholeStr, fracStr } = formatSplit(value, LUCA_FRAC_DIGITS);
   lucaEl.textContent = `${sign}${wholeStr}.${fracStr}`;
   const perSec = LUCA.anchorValue * LUCA_LN_PER_MS * 1000 * Math.exp(LUCA_LN_PER_MS * Math.max(0, nowMs - LUCA.anchorMs));
-  lucaRateEl.textContent = `+$${perSec.toFixed(4)}/sec (at current value)`;
+  lucaRateEl.textContent = `+$${perSec.toFixed(6)}/sec (at current value)`;
 }
 
 function tick() {
