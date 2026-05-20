@@ -17,25 +17,16 @@ Open http://localhost:8080
 
 ## Publish to GitHub Pages
 
-1. Create a new repository on GitHub (e.g. `debt-live`).
+Repo: [github.com/nicholasl25/debt-live](https://github.com/nicholasl25/debt-live)
 
-2. Push this folder:
+One-time setup (no GitHub Actions required):
 
-```bash
-cd debt-live
-git init
-git add .
-git commit -m "Add live national and Luca debt clocks"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/debt-live.git
-git push -u origin main
-```
+1. Open **Settings → Pages** on the repo.
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3. Choose branch **main**, folder **/ (root)**, then **Save**.
+4. After a minute or two, the site is live at **https://nicholasl25.github.io/debt-live/**
 
-3. In the repo on GitHub: **Settings → Pages → Build and deployment → Source**: **GitHub Actions** (this repo includes `.github/workflows/pages.yml`).
-
-4. After the workflow runs, your site will be at `https://YOUR_USERNAME.github.io/debt-live/`
-
-Alternatively, deploy from branch **main**, folder **/ (root)** — either method works for this static site.
+If you previously enabled **GitHub Actions** as the Pages source, switch it to **Deploy from a branch** as above. The old deploy workflow was removed because the Actions token cannot create or enable Pages on its own.
 
 ## Sources
 
