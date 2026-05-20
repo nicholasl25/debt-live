@@ -4,7 +4,7 @@ A simple GitHub Pages site showing two counters that grow in real time:
 
 1. **U.S. National Debt** — anchored at **$38.91 trillion** on May 5, 2026 (Senate Joint Economic Committee gross national debt), increasing at **$2.70 trillion per year** (the reported year-over-year increase as of May 2026).
 
-2. **The Luca Debt** — starts at **95.5** on May 20, 2026, compounding at **10% per month**.
+2. **The Luca Debt** — starts at **$95.50** on May 20, 2026, compounding at **10% per month**.
 
 ## Local preview
 
