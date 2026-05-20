@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Debt Clocks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Live Debt Clocks</h1>
+      <p class="subtitle">Numbers update continuously from fixed anchors and assumed growth rates.</p>
+    </header>
+
+    <section class="clock" id="national-section">
+      <h2>U.S. National Debt</h2>
+      <p class="meta">
+        Anchor: <strong>$38.91 trillion</strong> on May 5, 2026 (U.S. Senate JEC, gross national debt).
+        Growth: <strong>$2.70 trillion / year</strong> (~$85,574 / second), matching the YoY increase reported May 2026.
+      </p>
+      <div class="value-wrap">
+        <span class="prefix">$</span>
+        <span id="national-debt" class="value" aria-live="polite">—</span>
+      </div>
+      <p class="rate" id="national-rate"></p>
+    </section>
+
+    <section class="clock luca" id="luca-section">
+      <h2>The Luca Debt</h2>
+      <p class="meta">
+        Anchor: <strong>95.5</strong> on May 20, 2026 at 00:00:00 UTC.
+        Growth: <strong>10% per month</strong> (compounded continuously for smooth real-time display).
+      </p>
+      <div class="value-wrap">
+        <span id="luca-debt" class="value" aria-live="polite">—</span>
+      </div>
+      <p class="rate" id="luca-rate"></p>
+    </section>
+
+    <footer>
+      <p>National debt figure is approximate and modeled; not an official Treasury feed.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

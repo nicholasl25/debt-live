@@ -1,0 +1,145 @@
+:root {
+  --bg: #0a0e14;
+  --panel: #121820;
+  --text: #e8eef7;
+  --muted: #8b9bb0;
+  --accent: #3dd68c;
+  --accent-2: #f6a04d;
+  --border: #243044;
+  --glow: rgba(61, 214, 140, 0.15);
+  --glow-2: rgba(246, 160, 77, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--glow), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, var(--glow-2), transparent),
+    var(--bg);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.clock {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.clock h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.clock.luca h2 {
+  color: var(--accent-2);
+}
+
+#national-section h2 {
+  color: var(--accent);
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.value-wrap {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prefix {
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: var(--muted);
+  margin-right: 0.15rem;
+}
+
+.value {
+  font-size: clamp(1.1rem, 3.2vw, 1.65rem);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+#national-debt {
+  color: var(--accent);
+  text-shadow: 0 0 24px var(--glow);
+}
+
+#luca-debt {
+  color: var(--accent-2);
+  text-shadow: 0 0 24px var(--glow-2);
+}
+
+.rate {
+  margin: 1rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .value {
+    font-size: 1.55rem;
+  }
+}
